@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->text('description')->nullable();
-            $table->unsignedInteger('parent_id')->default(null);
+            $table->unsignedInteger('parent_id')->default(0);
             $table->timestamps();
         });
     }

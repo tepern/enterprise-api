@@ -10,7 +10,7 @@ class OrganizationCoordModel extends Model
     use HasFactory;
 
     protected $casts = [
-        'coordinates' => AsCoordinates::class,
+        'coordinates' => CoordinatesCast::class,
     ];
 
 }

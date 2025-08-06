@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use InvalidArgumentException;
 
-class AsCoordinates implements CastsAttributes
+class CoordinatesCast implements CastsAttributes
 {
     public function get($model,  string $key, $value, array $attributes): Coordinates
     {
@@ -17,8 +17,7 @@ class AsCoordinates implements CastsAttributes
     public function set($model, string $key, $value, array $attributes): array
     {
         return $value instanceof Coordinates ? [
-            'latitude'  => $value->latitude,
-            'longitude' => $value->longitude,
+            'coordinates'  => $value->__toString(),
         ] : throw new InvalidArgumentException('Invalid coordinates.');
     }
 }
