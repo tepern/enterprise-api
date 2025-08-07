@@ -23,3 +23,5 @@ php artisan migrate
 docker-compose exec php bash
 
 php artisan migrate:fresh --seed
+
+Visit to http://localhost/api/organization
