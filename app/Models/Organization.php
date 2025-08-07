@@ -9,9 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 class Organization extends Model
 {
     use HasFactory;
-
+   
+    /**
+     *
+     * @var array
+     */
     protected $casts = [
-        'phones' => 'json',
+        'phones' => 'array',
     ];
 
     public function building()

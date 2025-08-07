@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Contracts\Support\Arrayable;
@@ -8,7 +9,7 @@ class Coordinates implements JsonSerializable, Arrayable
 {
     public ?string $latitude = null;
     public ?string $longitude = null;
-    
+
     public function __construct(
         float $latitude,
         float $longitude
@@ -27,7 +28,7 @@ class Coordinates implements JsonSerializable, Arrayable
         return "({$this->latitude},{$this->longitude})";
     }
 
-     /**
+    /**
      *
      * @return array<string>
      */

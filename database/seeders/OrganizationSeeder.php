@@ -15,6 +15,6 @@ class OrganizationSeeder extends Seeder
     public function run(): void
     {
         \App\Models\Organization::factory()->count(10)
-        ->for(Building::factory())->has(Activity::factory()->count(3))->create();
+            ->for(Building::factory())->has(Activity::factory()->count(3))->create();
     }
 }

@@ -13,7 +13,7 @@ class ActivitySeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {       
+    {
         $activities = [];
 
         for ($i = 1; $i <= 10; $i++) {

@@ -12,5 +12,4 @@ class OrganizationCoordModel extends Model
     protected $casts = [
         'coordinates' => CoordinatesCast::class,
     ];
-
 }

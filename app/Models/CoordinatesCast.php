@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
@@ -6,11 +7,12 @@ use InvalidArgumentException;
 
 class CoordinatesCast implements CastsAttributes
 {
-    public function get($model,  string $key, $value, array $attributes): Coordinates
+    public function get($model, string $key, $value, array $attributes): Coordinates
     {
+        $coord = explode(',', explode(')', substr($attributes['coordinates'], 1))[0]);
         return new Coordinates(
-            (float) $attributes['latitude'], 
-            (float) $attributes['longitude'],
+            (float) $coord[0],
+            (float) $coord[1]
         );
     }
 
